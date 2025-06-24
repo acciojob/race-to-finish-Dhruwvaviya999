@@ -31,7 +31,9 @@ let promise5 = new Promise((res, rej) => {
 	}, (Math.floor(Math.random() * 5) + 1) * 1000)
 })
 
-Promise.any([promise1, promise2, promise3, promise4, promise5]).then((res) => {
+window.promises.push(promise1, promise2, promise3, promise4, promise5);
+
+Promise.any(window.promises).then((res) => {
 	outputDiv.textContent = res;
 })
 
