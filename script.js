@@ -32,7 +32,7 @@ let promise5 = new Promise((res, rej) => {
 })
 
 Promise.any([promise1, promise2, promise3, promise4, promise5]).then((res) => {
-	console.log(res);
+	outputDiv.textContent = res;
 })
 
 
